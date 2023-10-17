@@ -1,5 +1,5 @@
 import type p5 from 'p5';
-import { Bodies, Composite, World, Body } from 'matter-js';
+import { Bodies, Composite, Body } from 'matter-js';
 
 export class Boundary {
 	private p: p5;
@@ -8,30 +8,22 @@ export class Boundary {
 	private w: number;
 	private h: number;
 	private body: Body;
-	private fill: [number, number, number];
+	private fill: Color;
 
-	constructor(
-		p: p5,
-		x: number,
-		y: number,
-		w: number,
-		h: number,
-		world: World,
-		fill: [number, number, number]
-	) {
-		this.p = p;
-		this.x = x;
-		this.y = y;
-		this.w = w;
-		this.h = h;
-		this.fill = fill;
+	constructor(args: BoundaryOptions) {
+		this.p = args.p;
+		this.x = args.x;
+		this.y = args.y;
+		this.w = args.w;
+		this.h = args.h;
+		this.fill = args.fill;
 		const options = {
 			friction: 0.3,
 			restitution: 0.6,
 			isStatic: true
 		};
 		this.body = Bodies.rectangle(this.x, this.y, this.w, this.h, options);
-		Composite.add(world, this.body);
+		Composite.add(args.world, this.body);
 	}
 
 	public show(): void {
@@ -46,9 +38,5 @@ export class Boundary {
 		this.p.fill(...this.fill);
 		this.p.rect(0, 0, this.w, this.h);
 		this.p.pop();
-	}
-
-	public removeFromWorld(world: World): void {
-		Composite.remove(world, this.body);
 	}
 }

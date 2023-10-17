@@ -1,5 +1,5 @@
 import type p5 from 'p5';
-import { Bodies, Composite, World, Body } from 'matter-js';
+import { Bodies, Composite, Body } from 'matter-js';
 
 export class Circle {
 	private p: p5;
@@ -7,8 +7,8 @@ export class Circle {
 	private y: number;
 	private r: number;
 	private body: Body;
-	private color: [number, number, number];
-	private palette: [number, number, number][] = [
+	private color: Color;
+	private palette: Color[] = [
 		[171, 223, 255],
 		[92, 205, 255],
 		[0, 145, 228],
@@ -16,19 +16,19 @@ export class Circle {
 		[0, 34, 79]
 	];
 
-	constructor(p: p5, x: number, y: number, r: number, world: World) {
-		this.p = p;
-		this.x = x;
-		this.y = y;
-		this.r = r;
-		const options = {
+	constructor(options: CircleOptions) {
+		this.p = options.p;
+		this.x = options.x;
+		this.y = options.y;
+		this.r = options.r;
+		const args = {
 			friction: 0.3,
 			restitution: 0.15
 		};
-		this.body = Bodies.circle(this.x, this.y, this.r, options);
+		this.body = Bodies.circle(this.x, this.y, this.r, args);
 
 		this.color = this.p.random(this.palette);
-		Composite.add(world, this.body);
+		Composite.add(options.world, this.body);
 	}
 
 	public show(): void {
