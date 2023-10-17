@@ -376,6 +376,16 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.13.tgz#02c24f4363176d2d18fc8b70b9f3c54aba178a85"
   integrity sha512-RbSSoHliUbnXj3ny0CNFOoxrIDV6SUGyStHsvDqosw6CkdPV8TtWGlfecuK4ToyMEAql6pzNxgCFKanovUzlgQ==
 
+"@types/matter-js@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@types/matter-js/-/matter-js-0.19.1.tgz#0f80d2eb89b8a4b485a9c653e9c88a1c4861d6eb"
+  integrity sha512-GtX6SBzhQ+BpFimYx4oAQlwH8vFLcXv0rl7x0T59B/BJ/jp8UwpJq621trCvI8kBsEeAcfR+witutMrLANYzIA==
+
+"@types/p5@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-1.7.0.tgz#af56b6b930f31e73d6ec1cb9f4539481d3212b51"
+  integrity sha512-6AnjmW98/edgXB+pYDBx7t6QbCogIG6NUzey93JpGTZA4096C+KjSN8y0sj43QRd9XtblrAhoRXHj1pFZ2vsCg==
+
 "@types/pug@^2.0.6":
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/@types/pug/-/pug-2.0.7.tgz#ffb9239e4da7ea1af27070cad9343049e440993d"
@@ -1277,6 +1287,11 @@ magic-string@^0.30.0, magic-string@^0.30.3:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.15"
 
+matter-js@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/matter-js/-/matter-js-0.19.0.tgz#185e518146ae4fa20c33826ebc7e6e42685e3642"
+  integrity sha512-v2huwvQGOHTGOkMqtHd2hercCG3f6QAObTisPPHg8TZqq2lz7eIY/5i/5YUV8Ibf3mEioFEmwibcPUF2/fnKKQ==
+
 mdn-data@2.0.30:
   version "2.0.30"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
@@ -1415,6 +1430,11 @@ p-locate@^5.0.0:
   integrity sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==
   dependencies:
     p-limit "^3.0.2"
+
+p5@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-1.7.0.tgz#c983f12c2ffc1125e17cb89e97103f7716cb9f05"
+  integrity sha512-qrbT/44Dwm63ZtOKX/mp61pw+5yj6ijYLOmRv7p6zcfjbo83Vb0gVFEvW0kTLFu7hceWCig0HONo9F1bSlqbsQ==
 
 parent-module@^1.0.0:
   version "1.0.1"
